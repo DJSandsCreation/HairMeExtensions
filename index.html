@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+ <!--notice the settings create PY-1, M-HEADINGS etc almost like a framework, like bootstrap, so created a set of classes - what they do and then you call as required instead of setting each individual thing to a setting, like base utilities called -->
+  <!--notice the break down of each section, the full page starts with the header, nav and then sectioned areas -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--cdn for fontawesome -->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <!-- need to add media queries or media attributes for mobile and widescreen, eg, max-width: 768px when it hits 768 it will change) -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" href="mobile.css">
+    <link rel="stylesheet" media="screen and (min-width: 1100px)" href="widescreen.css">
+  <title>Hair Me | Extensions</title>
+ <!-- a one page website, different areas to go to but everything is on one page. CSS has 3 - mobile, wide screeen and style page. 1 JS file JS for the scrolling and JQuery for animation/map-->
+</head>
+<body id="home">
+  <!--nav bar needs to be at the top however we want it sticky so it travels with us as we travel along the page, put the nav bar outside of the showcase outside of this header with the ID of showcase,... if we put it inside of the showcase or in the header, when we reached the bottom it's going to disappear,it will be stuck in the parent element,  so nav goes outside showcase  -->
+  <!--Navbar -->
+  <nav id="navbar">
+    <h1 class="logo">
+      <span class="text-primary">
+        <!--heading name set to text primary -->
+        <i class="fas fa-crown"></i> Hair Me </span>Extensions</h1> 
+    <!--Navigation -->
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <!--Top -->
+      <li><a href="#what">What</a></li>
+      <li><a href="#who">Who</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <!-- Header: Showcase -->
+  <header id="showcase">
+    <div class="showcase-content">
+       <!-- Showcase-content to make it a flex container -->
+      <h1 class="l-heading"> 
+        <!-- another class l-heading, we want this one larger, the class name is made up no set rules apart from one learnt originally but developers tend to have set names of classes or ids -->
+        Hair Me!! Hair Me!!!
+      </h1>
+      <p class="lead">
+        In a world full of bad hair ..  <br>
+        It's time ... <br>
+        It's your CROWN  .. <br>
+        ...  <i class="fas fa-crown fa-3x"></i>  ...<br>
+      </p>
+      
+      <a href="#what" class="btn">Read More</a>
+      <!-- what links to the What We Do section -->
+    </div>
+  </header>
+
+  <!-- Section: What We Do -->
+<!-- so secttion given an ID of what, the a class of bg light which would be the big light settings the light grey background, py-1 padding and axsis y number 1 setting for padding top and bottom-->
+  <section id="what" class="bg-light py-1">
+    <!-- container her cause we want content to stay in the middle -->
+    <div class="container">
+      <!-- another heading, previously we did l-heading which was large, now we want it smaller so set to m-heading as in medium,also added text-center setting to make sure it aligns center, to utilize the previous text primary which was our primary setting the green, using it in the span to recall setting-->
+      <h2 class="m-heading text-center"><span class="text-primary">What</span> We Do</h2>
+      <!--so we need boxes for information so, inside the flex container - items class, then set the flex item to class item, so each box will have an icon using font awesome, then an h3 heading, a paragraph and 3 times that, off to css for styling the .container-->
+      <!-- box 1 -->
+      <div class="items">
+        <div class="item">
+          <i class="fas fa-shower fa-2x"></i>
+          <div>
+            <h3>The Process</h3>
+            <p>The advanced standard tape method results are completely undetectable, lightweight and comfortable to wear.</p>
+          </div>
+        </div>
+        <!-- box 2 -->
+        <div class="item">
+          <i class="fas fa-paint-brush fa-2x"></i>
+            <div>
+              <h3>Hair we use</h3>
+              <p>We have a wide range of hair extensions. Tested and we try to bring ranges to suit all budgets and requirements.</p>
+            </div>
+        </div>
+        <!-- box 3 -->
+        <div class="item">
+            <i class="fas fa-pencil-alt fa-2x"></i>
+            <div>
+              <h3>Terms & Conditions</h3>
+              <p>Terms & Conditions . The important legal bits. Contact us for more information ..  .....</p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Who We Are -->
+  <!-- so for this a flex box with 2 sections, an image that goes right up to the edge of page, so wont be using a container, as the section itself will be a flexbox, so a div box of who-img and another of who-text -->
+  <section id="who">
+    <div class="who-img"></div>
+    <!-- who-text, we are calling the bg-dark setting and using the padding 2 setting -->
+    <div class="who-text bg-dark p-2">
+       <!-- for this h2 we call the m heading and text primary setting -->
+      <h2 class="m-heading"><span class="text-primary">Who</span> We Are</h2>
+      <p>We dedicate ourselves to the art of applying beautiful, affordable, first class professional hair extensions which blend flawlessly with your natural hair. We have been trained by the best in the business to ensure we give amazing results every time and you are left feeling fabulous. </p>
+      <h3>Our Team</h3>
+      <!-- for the ul we use a class of list -->
+      <ul class="list">
+        <li>Lindsay White</li>
+        <li>Julie Smith</li>
+        <li>Di Sanderson</li>
+      </ul>
+    </div>
+  </section>
+
+
+  <!-- Section: Contact -->
+  <!-- so with ID contact we make this section, the contact section a flex container, the map and form are flex items, so contact -form for the form,  map for the google map , things will be done with JS-->
+  <section id="contact">
+    <!-- so a new utility  bg-primary with the p2 setting -->
+    <div class="contact-form bg-primary p-2">
+      <!-- reusing that m heading setting-->
+      <h2 class="m-heading">Contact Us</h2>
+      <p>Please use the form below to contact us</p>
+      <form>
+        <!-- So dont need action yet as not submitting it, so the class for group which wraps the labels, inputs, text with placeholders, duplicate 4 times, next one for email name type email next phone, type text, id phone, etc. the following is message, name and id is message and it has  a text area, lastly the input type submit, with value submit and using the btn dark setting -->
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" placeholder="Enter Name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" placeholder="Enter Email">
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="text" name="phone" id="phone" placeholder="Enter Phone Number">
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea name="message" id="message" placeholder="Enter Message"></textarea>
+        </div>
+        <input type="submit" value="Send" class="btn btn-dark">
+      </form>
+    </div>
+    <div class="map"></div>
+  </section>
+
+  <!-- Footer -->
+  <!-- Footer, with id main-footer , copyright info, etc, in a container to stay in the middle, add classes, bg dark, text center and py1 to add padding -->
+  <footer id="main-footer" class="bg-dark text-center py-1">
+    <div class="container">
+      <p>Copyright &copy; 2019 || Hair Me Hair Extensionss  || All Rights Reserved</p>
+      <p>Copyright &copy; <i class="fas fa-headphones-alt"></i> DJSands Creation</p>
+      
+    </div>
+  </footer>
+
+  <!-- JQuery CDN -->
+
+    <!-- JQuery CDN -->
+     <!-- JQuery CDN - can download script or use CDN, creates sliders, scrolling effects, animations, dom selection , cdn, uncompressed or minified - whcih has had spaces moved and is a smaller file, JQuery CDN goes at the bottom, above main JS = hirearchy, generally the api for the maps  needs to go into the main js file but as it has async defer that means we can put it at the very bottom -->
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+  <!-- Local JS File -->
+
+    <!-- pointing to JS folder with main,js to access the info - JS= script/ src, CSS = link/ href -->
+  <script src="main.js"></script>
+
+
+  <!-- Google Maps -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCA3az15M8DFTQGw8Hc3CghA4MmsQm5WiM&callback=initMap"
+  async defer></script>
+</body>
+</html>

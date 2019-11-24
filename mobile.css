@@ -1,0 +1,89 @@
+/* for 500px or less */
+
+/* So on wide screens and on tablets want the the icon basically align to the left, want to turn each item into a flex container so that they go horizontal, div and icon are horizontal even iif its a flex items, can also be flex containers.*/
+
+/* we need the icon and text to stack, however we set it to flexbox so now we need to display box , adda bit of padding*/
+#what .items {
+  display: block;
+  padding: 1rem;
+}
+
+/* Align icon to left */
+#what .items .item {
+  display: flex;
+  text-align: left;
+}
+
+/* Position icon */
+#what .items .item i {
+  margin-right: 1.3rem;
+  align-self: center;
+  margin-bottom: 0;
+}
+
+/* Smartphones */
+/* Start with navbar, keep flexbbbbut change ddddirection  to coloumn, align to center */
+@media(max-width: 500px) {
+  #navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+  /* going to add some margin bottom, going to make sure I text align center*/
+  #navbar .logo {
+    margin-bottom: 0.5rem;
+    text-align: center;
+  }
+  /* a bit of padding */
+  #navbar ul {
+    padding: 0.5rem;
+  }
+   /*  because of showcase mainn settings that wwe adjusted to fit  main css, lookingg   at the mobile version now there is an extra space. so targeting showcase content, instaed of 65 change to 110*/
+  #showcase .showcase-content {
+    top: 110px;
+  }
+   /*  want to get rid of image and the who ID since removing image*/
+  #who {
+    display: block;
+  }
+   /*  want to get rid of image and the who ID since removing image*/
+  #who .who-img {
+    display: none;
+  }
+   /* could leave it but images small, so its set to 60% so we change to 80% now and remove the last image, its bigger and there is less of them */
+  #clients .items img {
+    width: 80%;
+  }
+   /* could leave it but images small, so its set to 60% so we change to 80% now and remove the last image, its bigger and there is less of them */
+  #clients .items div:last-child {
+    display: none;
+  }
+   /* want to remove the flex, want tthem to stack, try the flex direction and coloumn, so couldnt see the map though */
+  #contact {
+    flex-direction: column;
+  }
+   /*so cuz we couldnt see the map, we added the height, added a black border and now it stacks  */
+  #contact .map {
+    height: 200px;
+    border-top: 4px solid #333;
+  }
+}
+   /* checked using the google developer thingy to check all the different mobile aspects */
+
+   /* a negative value in this.What this will do is it will suck the content up. */
+
+@media(max-height: 568px) {
+  #showcase .showcase-content {
+    margin-top: -2rem;
+    /* on the galaxy, cant see the btn on the viewport so adjusted negative rem, looks good on all except iphone 5, only on less than 568  */
+    top: 140px;
+    /* altered the top margin from 110 to 140 */
+  }
+   /*targeting 568 or smaller */
+  .l-heading {
+    font-size: 3rem;
+  }
+   /* targeting 568 or smallertargeting 568 or smaller */
+  .lead {
+    font-size: 1rem;
+  }
+}

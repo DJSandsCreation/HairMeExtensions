@@ -1,0 +1,18 @@
+/* Align icon to left */
+/* what we do, turn the IDs into flex box, they now align horizontally with icon right a=nd text on the left, but  centered so ass text-  align-left */
+#what .items .item {
+  display: flex;
+  text-align: left;
+}
+
+/* Position icon */
+/* Position icon - 1.3 remmm for space between icon and texxt, align self centers */
+#what .items .item i {
+  margin-right: 1.3rem;
+  align-self: center;
+  margin-bottom: 0;
+}
+/* sso dont want map in the formto be even, want to give the map more space. we have flex 1 for the map and screen, so change the map to flex 2 makes it wider, and when page reduces to  even*/
+#contact .map {
+  flex: 2;
+}

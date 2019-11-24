@@ -1,0 +1,265 @@
+/* link or import to css file, as  */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+/* reset, makes sure box sizing is border box, zero out margin and padding for everything*/
+* {
+  box-sizing: border-box;
+  margin:0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  /* a bit of line separation */
+  line-height: 1.4;
+}
+/* a links, remove underline so decor - none */
+a {
+  text-decoration: none;
+}
+/* add a bit of padding for paragraphs as we reset */
+p {
+  margin: 0.75rem 0;
+}
+
+/* Utility Classes -  nav area */
+
+/* Utility Classes - .container the whats, need to restrict the container to a certain width  */
+.container {
+  max-width: 1100px;
+  /* margin auto to make sure it aligns in the middle*/
+  margin: auto;
+  /* padding 0 top and bottom and 2rem left and right, overflow hidden */
+  padding: 0 2rem;
+  overflow: hidden;
+}
+/* Utility Classes -  a reusable , centering text*/
+.text-center {
+  text-align:center;
+}
+/* Utility Classes - first part, head name  */
+.text-primary {
+  color: #ad45f3;
+}
+/* Utility Classes - light with a light grey */
+.bg-light {
+  background: #f4f4f4;
+  color: rgb(51, 51, 51);
+}
+/* Utility Classes - dark, reverse really,  with a dark grey  */
+.bg-dark {
+  background: rgb(34, 2, 75);
+  color: #fff;
+}
+/* Utility Classes - so background will be green, the rest white */
+.bg-primary {
+  background: #210335;
+  color: #fff;v
+}
+/* Utility Classes - showcase content text that we want to be really big  */
+.l-heading {
+  font-size: 4rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.1;
+}
+/* Utility Classes -  medium text setting, reusable */
+.m-heading {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.1;
+}
+
+/* Utility Classes - showcase content text the paragraph,  */
+.lead {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+/*  Utility Classes - the padding classes*/
+
+/* PY padding 1.5rem top and bottom 0, shortened it by putting everything on the same line, as in  .py-1 { padding: 1.5rem 0; }  no different to ususal way , py 1 some, padding, py 2 more and 3 even more */
+.py-1 { padding: 1.5rem 0; }
+.py-2 { padding: 2rem 0; }
+.py-3 { padding: 3rem 0; }
+
+/* P- , a padding class that puts padding all round*/
+.p-1 { padding: 1.5rem; }
+.p-2 { padding: 2rem; }
+.p-3 { padding: 3rem; }
+
+/* Utility Classes - showcase content button, so we set to inline block, the text to be white, the background boxy thing to be green, also want some padding so edges arent right next to text, top 0.5rem 2rem left and right, sodont add any border as it is a link, we want to remove the border, and then round corners border radius to 5 */
+.btn {
+  display: inline-block;
+  color: #fff;
+  background: #ad45f3;
+  padding: 0.5rem 2rem;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Utility Classes - showcase content text button the hover animation , a lighter green for now , just the background bit */
+.btn:hover {
+  background: #ad45f3;
+}
+
+/* Utility Classes - btn drk class to use, background of dark grey and text color of white  */
+.btn-dark {
+  background: #210335;
+  color: #fff;
+}
+/* list,  */
+.list {
+  margin: 0.5rem 0;
+  list-style: none;
+}
+/* list item, border bot, grey dotted 1px  */
+.list li {
+  padding: 0.5rem 0;
+  border-bottom: #444 dotted 1px;
+}
+
+/* Navbar */
+#navbar {
+  /* so we want the content to be flex, the logo to float to left & menu to right but we are using flex, so adding display flex, so whatever is the child of the nav bar, the h1, ul so they get floated horizontally, so adding justify content - aligns things horizontally , using space between to create that space between, it gets pushed over to the side */
+  display: flex;
+  justify-content: space-between;
+  /* position set to sticky with a margin of 0 so it sticks to the top */
+  position: sticky;
+  top:0;
+  background: #210335;
+  /* anything that isnt a link will be white */
+  color: #fff;
+  /* the z-index the higher the number the closer to the screen, we want the nav to be ontop no matter what */
+  z-index: 1;
+  /* so set 1 rem, it'll still be the 16px as we havent touched the root html font size */
+  padding: 1rem;
+}
+
+#navbar ul {
+  /* also flex, display makes ara fit to size, align makes both main head and menu align to each other, list style items removed the bullet points */
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+/* the links set to white, already remove underline and put some padding as they are ontop of each other, margin on left and right */
+#navbar ul li a {
+  color: #fff;
+  padding: 0.75rem;
+  margin: 0 0.25rem;
+}
+/* hover state - so when hover on menu we want it to turn green theme, so boxes are filled, round the corners with the border radius*/
+#navbar ul li a:hover {
+  background: #ad45f3;
+  border-radius: 5px;
+}
+
+/* Showcase */
+#showcase {
+  /* the showcase id first, add background image, but first with a color grey #333 then image url, no repeat, center center to cover the entire area */
+  background: #210335 url('main.jpg') no-repeat center center/cover;
+  /* the image only covers the content area so we want it to show the whole image so need to adjust the view point height, set 100 to fill the whole view port */
+  height: 100vh;
+  /* everything in the showcase will be white */
+  color: #fff;
+}
+
+/* Showcase content, so the ID showcase then class showcase content */
+#showcase .showcase-content {
+  /* display flex but the default for that is flex row  but we want coloumn, so add  flex direction coloumn */
+  display: flex;
+  flex-direction: column;
+  /* so we want text to be align centered horizontally as well as vertically, so add text-align,  justify-content, align-items so it didnt move horizontally centered because there is no height set , there is for showcase but not for showcase content therefore set height to 100% of the 100vh */
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  /* padding o the 2 rem for left and right */
+  padding: 0 2rem;
+  /* Overlay */
+  /* overlay - position absolute so it can over the whole showcase content area*/
+  position: absolute;
+   /* the positioning , top set to 0 leaves the bottom missing as the nav bar is there so that takes it into account, so set to 60 top 0 left 0 */
+  top: 65px;
+  left:0;
+   /* had to add left o, right o, bottom o as position is set to absolute */
+  right: 0;
+  bottom: 0;
+   /* the color of overlay,  rgba( red, gree, blue, opacity) if we did rgba(0,0,0,1) no transparency at all, 0.9 is alittle, so usinge 0.4, so darker over the image but the text isnt darker*/
+  background-color: rgba(0,0,0,0.4);
+}
+
+/* Section: What We Do */
+
+/* #what then items is better targetting specific classes, so items wrap around all 3 boxes, set display to flex, so it aligns them, add some padding to spread things out, done to  items / items.item  */
+#what .items {
+  display: flex;
+  padding: 1rem;
+}
+
+/* #what then items is better targetting specific classes,take each item and center all content,  add some padding to spread things out, done to  items / items.item */
+#what .items .item {
+  flex: 1;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* #what then items is better targetting specific classes, add some padding to spread things out, done to  items / items.item */
+/* #what .items .item i is targetting the icon,  background set to that green, then add padding, to make it circle we want to do a border radius of 50 percent, add a little margin to the bottom to push the heading down.*/
+#what .items .item i {
+  background: #ad45f3;
+  padding: 1rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+/* Section: Who We Are */
+
+/* who is the flex container*/
+#who {
+  display: flex;
+}
+/* any div thats inside the who is flex 1 , which splits it in half*/
+#who div {
+  flex: 1;
+}
+/* img, no repeat, center and cover, everything done apart from setting utility padding, */
+#who .who-img {
+  background: url('haireye.jpg') no-repeat center center/cover;
+}
+
+/* Section: Clients */
+/*  Clients this section with logo images, set to flex box */
+#clients .items {
+  display: flex;
+}
+/* Section:so the images are quite large, display as a block, margin auto to center and then the width at 60 so it sits in the middle */
+#clients .items img {
+  display: block;
+  margin: auto;
+  width: 60%;
+}
+
+/* Section: Contact */
+
+/* this is flex display */
+#contact {
+  display: flex;
+}
+/* contact form and the map needs to have flex 1 so they willl be even  */
+#contact .map, #contact .contact-form {
+  flex: 1;
+}
+/* form group margin to seperate them a bit */
+#contact .contact-form .form-group {
+  margin: 0.75rem;
+}
+/* right now label is inline which sets it to th left, change to block and it shows ontop of each other*/
+#contact .contact-form label {
+  display: block;
+}
+/* Section: Contact */
+/* form inputting area, width 100% to go all the way across with some padding */
+#contact .contact-form input,
+#contact .contact-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+}
